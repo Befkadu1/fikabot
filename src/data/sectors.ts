@@ -1,4 +1,10 @@
-import type { Sector } from '../types.js';
+export interface Sector {
+  emoji: string;
+  title: string;
+  challenge: string;
+  solution: string;
+  benefit: string;
+}
 
 export const sectors: Sector[] = [
   {

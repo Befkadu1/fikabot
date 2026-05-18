@@ -1,4 +1,8 @@
-import type { LocationCard } from '../types.js';
+export interface LocationCard {
+  icon: string;
+  title: string;
+  text: string;
+}
 
 export const locations: LocationCard[] = [
   {

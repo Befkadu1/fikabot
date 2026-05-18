@@ -1,4 +1,8 @@
-import type { Benefit } from '../types.js';
+export interface Benefit {
+  stat: string;
+  title: string;
+  text: string;
+}
 
 export const benefits: Benefit[] = [
   {

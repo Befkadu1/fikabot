@@ -1,6 +1,9 @@
-import type { Faq } from '../types.js';
+export interface FaqItem {
+  q: string;
+  a: string;
+}
 
-export const faqs: Faq[] = [
+export const faqs: FaqItem[] = [
   {
     q: 'How are cleaning and refilling organized?',
     a: 'Daily maintenance takes less than 30 minutes. FikaBot AB manages the supply chain, restocking and deep-cleaning protocols locally — meaning venue owners have absolutely zero operational liabilities.',

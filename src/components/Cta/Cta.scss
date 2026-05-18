@@ -1,0 +1,26 @@
+.section-cta {
+  background: linear-gradient(135deg, var(--blue-700) 0%, var(--blue-600) 50%, var(--cyan-400) 100%);
+  color: #fff;
+  text-align: center;
+
+  h2 { color: #fff; }
+  p {
+    color: rgba(255,255,255,.9);
+    font-size: 1.1rem;
+    margin-bottom: 28px;
+  }
+  .btn-primary {
+    background: #fff;
+    color: var(--blue-700);
+
+    &:hover {
+      background: #f0f6ff;
+      color: var(--blue-700);
+    }
+  }
+}
+
+.cta-inner {
+  max-width: 640px;
+  margin: 0 auto;
+}
