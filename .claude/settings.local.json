@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p /Users/befkadudegefa/Documents/fikabot/assets)",
+      "Bash(cp /Users/befkadudegefa/Downloads/16dee86e-3903-4c53-843a-3feb9c5acf45.jpeg /Users/befkadudegefa/Documents/fikabot/assets/logo.jpeg)",
+      "Bash(cp /Users/befkadudegefa/Downloads/8f14f5f5-81c1-4c50-8cf2-55c5d060db2f.jpeg /Users/befkadudegefa/Documents/fikabot/assets/robot-cafe.jpeg)",
+      "Bash(open *)",
+      "Bash(tsc --version)",
+      "Bash(npm install *)",
+      "Bash(npx tsc *)"
+    ]
+  }
+}

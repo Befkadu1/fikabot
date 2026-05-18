@@ -1,0 +1,14 @@
+{
+  "name": "fikabot-site",
+  "version": "1.0.0",
+  "description": "FikaBot AB static marketing site",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "serve": "python3 -m http.server 8765"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  }
+}
