@@ -1,1 +1,0 @@
-export { Sectors } from './Sectors';

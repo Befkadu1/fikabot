@@ -1,0 +1,27 @@
+.section-cta {
+  background: linear-gradient(135deg, var(--caramel) 0%, #a9714a 100%);
+  color: #2a1a10;
+  text-align: center;
+
+  h2 { color: #2a1a10; }
+  p {
+    color: rgba(42, 26, 16, .82);
+    font-size: 1.1rem;
+    margin-bottom: 28px;
+  }
+  .btn-primary {
+    background: #2a1a10;
+    color: var(--cream);
+    box-shadow: 0 12px 26px rgba(0, 0, 0, .28);
+
+    &:hover {
+      background: #3b2417;
+      color: var(--cream);
+    }
+  }
+}
+
+.cta-inner {
+  max-width: 640px;
+  margin: 0 auto;
+}

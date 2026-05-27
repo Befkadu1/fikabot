@@ -1,0 +1,31 @@
+@use '../../styles/variables' as *;
+
+.locations-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.location-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-sm);
+
+  .icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--caramel), var(--latte));
+    color: #2a1a10;
+    display: grid;
+    place-items: center;
+    font-size: 1.4rem;
+    margin-bottom: 18px;
+  }
+}
+
+@media (max-width: $bp-md) {
+  .locations-grid { grid-template-columns: 1fr; }
+}

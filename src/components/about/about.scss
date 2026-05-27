@@ -1,0 +1,41 @@
+@use '../../styles/variables' as *;
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.about-card {
+  background: rgba(243,233,221,.05);
+  border: 1px solid rgba(243,233,221,.14);
+  border-radius: var(--radius);
+  padding: 28px;
+  backdrop-filter: blur(10px);
+
+  h4 {
+    color: var(--latte);
+    text-transform: uppercase;
+    font-size: .8rem;
+    letter-spacing: .15em;
+    margin-bottom: 16px;
+  }
+  ul { list-style: none; padding: 0; margin: 0; }
+  li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(243,233,221,.1);
+    font-size: .95rem;
+
+    &:last-child { border-bottom: 0; }
+    &::before {
+      content: '✓ ';
+      color: var(--latte);
+      font-weight: 700;
+    }
+  }
+}
+
+@media (max-width: $bp-md) {
+  .about-grid { grid-template-columns: 1fr; }
+}

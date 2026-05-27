@@ -1,0 +1,109 @@
+@use '../../styles/variables' as *;
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(28, 15, 7, .72);
+  backdrop-filter: saturate(160%) blur(12px);
+  border-bottom: 1px solid var(--line);
+  transition: box-shadow .2s, background .2s;
+
+  &.scrolled { box-shadow: var(--shadow-sm); background: rgba(28, 15, 7, .92); }
+}
+
+.nav-inner {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--cream);
+}
+.brand-logo {
+  height: 40px;
+  width: 40px;
+  border-radius: 8px;
+  object-fit: cover;
+  background: var(--roast);
+}
+.brand-text {
+  font-weight: 800;
+  font-size: 1.05rem;
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  color: var(--cream);
+
+  small {
+    font-weight: 500;
+    font-size: .65rem;
+    color: var(--taupe);
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    margin-top: 3px;
+  }
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+
+  a {
+    color: var(--cream-2);
+    font-weight: 500;
+    font-size: .95rem;
+    &:hover { color: var(--latte); }
+  }
+}
+
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: 0;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  padding: 8px;
+
+  span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: var(--cream);
+    margin: 4px 0;
+  }
+}
+
+@media (max-width: $bp-sm) {
+  .nav-toggle { display: block; }
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0; right: 0;
+    flex-direction: column;
+    background: var(--espresso);
+    border-bottom: 1px solid var(--line);
+    padding: 12px 24px 20px;
+    gap: 14px;
+    transform: translateY(-12px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .2s, transform .2s;
+
+    &.open {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+}
