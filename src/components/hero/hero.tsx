@@ -1,13 +1,9 @@
 import fikabotVideo from '../../assets/fikabot.mp4';
+import { useT } from '../../i18n';
 import './hero.scss';
 
-const stats = [
-  { value: '50s',    label: 'per cup' },
-  { value: '24/7',   label: 'unattended' },
-  { value: '2.5 m²', label: 'footprint' },
-];
-
 export function Hero() {
+  const t = useT().hero;
   return (
     <section id="home" class="hero">
       <video
@@ -23,22 +19,18 @@ export function Hero() {
       <div class="hero-overlay" aria-hidden="true" />
 
       <div class="container hero-content">
-        <span class="eyebrow light">Made in Skåne, Sweden</span>
+        <span class="eyebrow light">{t.eyebrow}</span>
         <h1>
-          Upgrade Your Space with the{' '}
-          <span class="accent">Future of Automated Coffee</span>
+          {t.h1pre}
+          <span class="accent">{t.h1accent}</span>
         </h1>
-        <p class="lede">
-          FikaBot AB brings premium, 24/7 robotic barista experiences to
-          high-traffic locations across Sweden. Zero cost or operational
-          hassle for you. Pure innovation for your visitors.
-        </p>
+        <p class="lede">{t.lede}</p>
         <div class="hero-cta">
-          <a href="#contact" class="btn btn-primary btn-lg">Host a FikaBot</a>
-          <a href="#benefits" class="btn btn-ghost btn-lg">See how it works →</a>
+          <a href="#contact" class="btn btn-primary btn-lg">{t.ctaPrimary}</a>
+          <a href="#benefits" class="btn btn-ghost btn-lg">{t.ctaSecondary}</a>
         </div>
         <ul class="hero-mini">
-          {stats.map((s) => (
+          {t.stats.map((s) => (
             <li key={s.label}>
               <strong>{s.value}</strong>
               <span>{s.label}</span>

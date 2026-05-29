@@ -1,20 +1,14 @@
 import { useState } from 'preact/hooks';
 import { useScrolled } from '@hooks/useScrolled';
+import { useLocale, useT } from '../../i18n';
 import logoMark from '../../assets/logo-mark.jpeg';
 import './nav.scss';
-
-const links = [
-  { href: '#benefits',  label: 'Benefits'  },
-  { href: '#locations', label: 'Locations' },
-  { href: '#gallery',   label: 'Gallery'   },
-  { href: '#sectors',   label: 'Sectors'   },
-  { href: '#about',     label: 'About'     },
-  { href: '#faq',       label: 'FAQ'       },
-];
 
 export function Nav() {
   const scrolled = useScrolled();
   const [open, setOpen] = useState(false);
+  const { locale, setLocale } = useLocale();
+  const t = useT().nav;
 
   const close = () => setOpen(false);
 
@@ -38,10 +32,30 @@ export function Nav() {
         </button>
 
         <nav class={`nav-links ${open ? 'open' : ''}`}>
-          {links.map((l) => (
+          {t.links.map((l) => (
             <a key={l.href} href={l.href} onClick={close}>{l.label}</a>
           ))}
-          <a href="#contact" class="btn btn-primary btn-sm" onClick={close}>Contact</a>
+          <div class="lang-toggle" role="group" aria-label="Language">
+            <button
+              type="button"
+              class={locale === 'en' ? 'active' : ''}
+              aria-pressed={locale === 'en'}
+              aria-label="English"
+              onClick={() => setLocale('en')}
+            >
+              <span class="flag" aria-hidden="true">🇬🇧</span>EN
+            </button>
+            <button
+              type="button"
+              class={locale === 'sv' ? 'active' : ''}
+              aria-pressed={locale === 'sv'}
+              aria-label="Svenska"
+              onClick={() => setLocale('sv')}
+            >
+              <span class="flag" aria-hidden="true">🇸🇪</span>SV
+            </button>
+          </div>
+          <a href="#contact" class="btn btn-primary btn-sm" onClick={close}>{t.contact}</a>
         </nav>
       </div>
     </header>

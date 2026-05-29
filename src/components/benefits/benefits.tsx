@@ -1,17 +1,18 @@
-import { benefits } from '@data/benefits';
+import { useT } from '../../i18n';
 import './benefits.scss';
 
 export function Benefits() {
+  const t = useT().benefits;
   return (
     <section id="benefits" class="section">
       <div class="container">
         <div class="section-head">
-          <span class="eyebrow">Benefits</span>
-          <h2>The Future of Coffee</h2>
-          <p>Specialty coffee, brewed by a champion-grade robotic arm — built for speed, hygiene and scale.</p>
+          <span class="eyebrow">{t.eyebrow}</span>
+          <h2>{t.title}</h2>
+          <p>{t.lede}</p>
         </div>
         <div class="benefits-grid">
-          {benefits.map((b) => (
+          {t.items.map((b) => (
             <article key={b.title} class="benefit-card reveal">
               <span class="stat">{b.stat}</span>
               <h3>{b.title}</h3>

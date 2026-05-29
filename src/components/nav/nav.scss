@@ -66,6 +66,38 @@
   }
 }
 
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid rgba(243, 233, 221, .22);
+  border-radius: 999px;
+  overflow: hidden;
+
+  button {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .04em;
+    color: var(--taupe);
+    padding: 5px 11px;
+    transition: background .2s, color .2s;
+
+    .flag { font-size: .95rem; line-height: 1; }
+
+    &:hover { color: var(--cream); }
+    &.active {
+      background: var(--caramel);
+      color: #2a1a10;
+    }
+  }
+}
+
 .nav-toggle {
   display: none;
   background: transparent;

@@ -1,8 +1,9 @@
 import { useState } from 'preact/hooks';
-import { faqs } from '@data/faqs';
+import { useT } from '../../i18n';
 import './faq.scss';
 
 export function Faq() {
+  const t = useT().faq;
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggle = (i: number) => setOpenIndex((cur) => (cur === i ? null : i));
@@ -11,12 +12,12 @@ export function Faq() {
     <section id="faq" class="section">
       <div class="container">
         <div class="section-head">
-          <span class="eyebrow">FAQ</span>
-          <h2>Technology, Trust & Cleaning</h2>
-          <p>The exact questions every mall, university and kommun asks us — answered.</p>
+          <span class="eyebrow">{t.eyebrow}</span>
+          <h2>{t.title}</h2>
+          <p>{t.lede}</p>
         </div>
         <div class="faq-list">
-          {faqs.map((f, i) => {
+          {t.items.map((f, i) => {
             const open = openIndex === i;
             return (
               <div key={f.q} class="faq-item reveal">
