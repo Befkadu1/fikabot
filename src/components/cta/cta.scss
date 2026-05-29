@@ -43,3 +43,25 @@
   justify-content: center;
   flex-wrap: wrap;
 }
+
+.cta-qr {
+  margin-top: 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  img {
+    width: 132px;
+    height: 132px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 12px 26px rgba(0, 0, 0, .28);
+  }
+  span {
+    font-size: .85rem;
+    font-weight: 600;
+    color: rgba(42, 26, 16, .82);
+  }
+}

@@ -1,3 +1,4 @@
+import qrCode from '../../assets/fikabot-qr.svg';
 import './cta.scss';
 
 export function Cta() {
@@ -9,6 +10,10 @@ export function Cta() {
         <div class="cta-actions">
           <a href="mailto:stessema@fikabot.se" class="btn btn-primary btn-lg">stessema@fikabot.se</a>
           <a href="tel:+46738954018" class="btn btn-outline-dark btn-lg">+46 73 895 40 18</a>
+        </div>
+        <div class="cta-qr">
+          <img src={qrCode} alt="QR code linking to fikabot.se" width="132" height="132" />
+          <span>Scan to open fikabot.se</span>
         </div>
       </div>
     </section>
