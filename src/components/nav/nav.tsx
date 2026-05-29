@@ -22,10 +22,7 @@ export function Nav() {
     <header id="nav" class={`nav ${scrolled ? 'scrolled' : ''}`}>
       <div class="nav-inner">
         <a href="#home" class="brand" onClick={close}>
-          <img src={logo} alt="FikaBot logo" class="brand-logo" />
-          <span class="brand-text">
-            FikaBot<small>Precision Coffee Co.</small>
-          </span>
+          <img src={logo} alt="FikaBot — Precision Coffee Co." class="brand-logo" />
         </a>
 
         <button

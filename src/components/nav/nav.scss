@@ -29,28 +29,9 @@
   color: var(--cream);
 }
 .brand-logo {
-  height: 40px;
-  width: 40px;
-  border-radius: 8px;
-  object-fit: cover;
-  background: var(--roast);
-}
-.brand-text {
-  font-weight: 800;
-  font-size: 1.05rem;
-  display: flex;
-  flex-direction: column;
-  line-height: 1;
-  color: var(--cream);
-
-  small {
-    font-weight: 500;
-    font-size: .65rem;
-    color: var(--taupe);
-    letter-spacing: .15em;
-    text-transform: uppercase;
-    margin-top: 3px;
-  }
+  height: 44px;
+  width: auto;
+  display: block;
 }
 
 .nav-links {
