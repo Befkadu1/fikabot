@@ -9,9 +9,11 @@ import { Faq } from '@components/faq';
 import { Cta } from '@components/cta';
 import { Footer } from '@components/footer';
 import { useReveal } from '@hooks/useReveal';
+import { useLocale } from './i18n';
 
 export function App() {
-  useReveal();
+  const { locale } = useLocale();
+  useReveal(locale);
   return (
     <>
       <Nav />
