@@ -19,9 +19,27 @@
       color: var(--cream);
     }
   }
+  .btn-outline-dark {
+    background: transparent;
+    color: #2a1a10;
+    border-color: rgba(42, 26, 16, .45);
+
+    &:hover {
+      background: rgba(42, 26, 16, .08);
+      color: #2a1a10;
+      border-color: #2a1a10;
+    }
+  }
 }
 
 .cta-inner {
   max-width: 640px;
   margin: 0 auto;
+}
+
+.cta-actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
 }

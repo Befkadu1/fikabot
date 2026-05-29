@@ -20,6 +20,10 @@ export function Footer() {
             FikaBot AB · Precision Coffee Co.
             <br />
             Skåne, Sweden
+            <br />
+            <a href="mailto:stessema@fikabot.se">stessema@fikabot.se</a>
+            {' · '}
+            <a href="tel:+46738954018">+46 73 895 40 18</a>
           </p>
         </div>
         <div class="footer-links">

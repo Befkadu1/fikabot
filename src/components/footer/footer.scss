@@ -27,6 +27,12 @@
     margin: 0;
     font-size: .9rem;
     color: var(--cream-2);
+    line-height: 1.8;
+
+    a {
+      color: var(--latte);
+      &:hover { color: var(--cream); }
+    }
   }
 }
 
