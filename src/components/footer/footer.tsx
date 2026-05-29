@@ -1,4 +1,4 @@
-import logo from '../../assets/logo.jpeg';
+import logoMark from '../../assets/logo-mark.jpeg';
 import './footer.scss';
 
 const links = [
@@ -15,7 +15,7 @@ export function Footer() {
     <footer class="footer">
       <div class="container footer-inner">
         <div class="footer-brand">
-          <img src={logo} alt="FikaBot logo" />
+          <img src={logoMark} alt="FikaBot logo" />
           <p>
             FikaBot AB · Precision Coffee Co.
             <br />
