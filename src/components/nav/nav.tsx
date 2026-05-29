@@ -6,6 +6,7 @@ import './nav.scss';
 const links = [
   { href: '#benefits',  label: 'Benefits'  },
   { href: '#locations', label: 'Locations' },
+  { href: '#gallery',   label: 'Gallery'   },
   { href: '#sectors',   label: 'Sectors'   },
   { href: '#about',     label: 'About'     },
   { href: '#faq',       label: 'FAQ'       },

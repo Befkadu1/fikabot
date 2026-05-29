@@ -2,6 +2,7 @@ import { Nav } from '@components/nav';
 import { Hero } from '@components/hero';
 import { Benefits } from '@components/benefits';
 import { Locations } from '@components/locations';
+import { Gallery } from '@components/gallery';
 import { Sectors } from '@components/sectors';
 import { About } from '@components/about';
 import { Faq } from '@components/faq';
@@ -16,6 +17,7 @@ export function App() {
       <Nav />
       <main>
         <Hero />
+        <Gallery />
         <Benefits />
         <Locations />
         <Sectors />

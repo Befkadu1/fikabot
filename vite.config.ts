@@ -13,7 +13,9 @@ export default defineConfig({
     },
   },
   server: {
+    host: true, // listen on 0.0.0.0 so other devices on the LAN can connect
     port: 8765,
+    strictPort: true,
     open: false,
   },
   build: {
