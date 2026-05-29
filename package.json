@@ -12,6 +12,7 @@
     "deploy": "npm run build && rsync -avz --delete -e \"ssh -i ~/.ssh/loopia_fikabot\" dist/ cy830c@ssh.loopia.se:~/fikabot.se/public_html/"
   },
   "dependencies": {
+    "@fontsource/inter": "^5.2.8",
     "preact": "^10.22.0"
   },
   "devDependencies": {

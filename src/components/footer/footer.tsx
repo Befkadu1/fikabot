@@ -30,6 +30,7 @@ export function Footer() {
           {links.map((l) => (
             <a key={l.href} href={l.href}>{l.label}</a>
           ))}
+          <a href="/privacy.html">Privacy</a>
         </div>
         <p class="footer-copy">© {year} FikaBot AB. All rights reserved.</p>
       </div>
