@@ -1,6 +1,6 @@
 import { useState } from 'preact/hooks';
 import { useScrolled } from '@hooks/useScrolled';
-import logo from '../../assets/logo.jpeg';
+import logoMark from '../../assets/logo-mark.jpeg';
 import './nav.scss';
 
 const links = [
@@ -22,7 +22,10 @@ export function Nav() {
     <header id="nav" class={`nav ${scrolled ? 'scrolled' : ''}`}>
       <div class="nav-inner">
         <a href="#home" class="brand" onClick={close}>
-          <img src={logo} alt="FikaBot — Precision Coffee Co." class="brand-logo" />
+          <img src={logoMark} alt="FikaBot logo" class="brand-logo" />
+          <span class="brand-text">
+            FikaBot<small>Precision Coffee Co.</small>
+          </span>
         </a>
 
         <button
