@@ -19,7 +19,6 @@ export function Hero() {
       <div class="hero-overlay" aria-hidden="true" />
 
       <div class="container hero-content">
-        <span class="eyebrow light">{t.eyebrow}</span>
         <h1>
           {t.h1pre}
           <span class="accent">{t.h1accent}</span>

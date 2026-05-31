@@ -7,7 +7,6 @@ export interface Messages {
     contact: string;
   };
   hero: {
-    eyebrow: string;
     h1pre: string;
     h1accent: string;
     lede: string;
@@ -45,10 +44,6 @@ export interface Messages {
     title: string;
     p1: string;
     p2: string;
-    h3: string;
-    p3pre: string;
-    p3strong: string;
-    p3post: string;
     cardTitle: string;
     certs: string[];
   };
@@ -88,7 +83,6 @@ const en: Messages = {
     contact: 'Contact',
   },
   hero: {
-    eyebrow: 'Made in Skåne, Sweden',
     h1pre: 'Upgrade Your Space with the ',
     h1accent: 'Future of Automated Coffee',
     lede:
@@ -153,10 +147,6 @@ const en: Messages = {
     title: 'The Future of Hospitality, Rooted in Sweden.',
     p1: 'Founded in Skåne, FikaBot AB was born out of a simple vision: to revolutionize the traditional Swedish fika by merging world-class automated robotics with premium, everyday hospitality.',
     p2: "We don't just operate vending machines — we deploy fully autonomous, unmanned robotic cafés that serve barista-quality specialty coffee 24/7. FikaBot AB takes care of 100% of logistics, technical maintenance and sourcing, so property owners, municipalities and institutions can effortlessly monetize their foot traffic.",
-    h3: 'Our Global Tech Partner: Hi-Dolphin Technology',
-    p3pre: 'Our kiosks represent the ',
-    p3strong: '6th Generation',
-    p3post: " of the internationally acclaimed Cofe+ Robot Barista — developed by an elite team of automation engineers, software developers and coffee experts. Hi-Dolphin's technology is covered by dozens of global patents and is fully certified to meet strict European safety, hygiene and electrical standards.",
     cardTitle: 'Certified & Compliant',
     certs: [
       'EU safety, hygiene & electrical certifications',
@@ -220,7 +210,6 @@ const sv: Messages = {
     contact: 'Kontakt',
   },
   hero: {
-    eyebrow: 'Tillverkad i Skåne, Sverige',
     h1pre: 'Uppgradera din lokal med ',
     h1accent: 'framtidens automatiserade kaffe',
     lede:
@@ -285,10 +274,6 @@ const sv: Messages = {
     title: 'Framtidens gästfrihet, med rötter i Sverige.',
     p1: 'FikaBot AB grundades i Skåne ur en enkel vision: att revolutionera den traditionella svenska fikan genom att förena automationsrobotik i världsklass med premiumgästfrihet i vardagen.',
     p2: 'Vi driver inte bara varuautomater — vi sätter upp helt autonoma, obemannade robotcaféer som serverar specialkaffe av baristakvalitet dygnet runt. FikaBot AB sköter 100 % av logistik, teknisk drift och inköp, så att fastighetsägare, kommuner och institutioner enkelt kan tjäna pengar på sina besöksflöden.',
-    h3: 'Vår globala teknikpartner: Hi-Dolphin Technology',
-    p3pre: 'Våra kiosker representerar den ',
-    p3strong: '6:e generationen',
-    p3post: ' av den internationellt hyllade Cofe+ Robot Barista — utvecklad av ett elitteam av automationsingenjörer, mjukvaruutvecklare och kaffeexperter. Hi-Dolphins teknik skyddas av dussintals globala patent och är fullt certifierad för att uppfylla strikta europeiska krav på säkerhet, hygien och el.',
     cardTitle: 'Certifierad & godkänd',
     certs: [
       'EU-certifieringar för säkerhet, hygien och el',

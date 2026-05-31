@@ -10,10 +10,10 @@ function detectLocale(): Locale {
     const saved = localStorage.getItem(STORAGE_KEY);
     if (saved === 'en' || saved === 'sv') return saved;
   } catch {
-    /* localStorage unavailable — fall through to browser language */
+    /* localStorage unavailable — fall through to default */
   }
-  const lang = typeof navigator !== 'undefined' ? navigator.language : '';
-  return lang.toLowerCase().startsWith('sv') ? 'sv' : 'en';
+  // Swedish is the default language; visitors can switch to English.
+  return 'sv';
 }
 
 interface LocaleContextValue {
