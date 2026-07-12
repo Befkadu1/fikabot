@@ -3,6 +3,7 @@ import { Hero } from '@components/hero';
 import { Benefits } from '@components/benefits';
 import { Locations } from '@components/locations';
 import { Gallery } from '@components/gallery';
+import { Menu } from '@components/menu';
 import { Sectors } from '@components/sectors';
 import { About } from '@components/about';
 import { Faq } from '@components/faq';
@@ -20,6 +21,7 @@ export function App() {
       <main>
         <Hero />
         <Gallery />
+        <Menu />
         <Benefits />
         <Locations />
         <Sectors />

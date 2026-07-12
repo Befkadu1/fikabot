@@ -32,6 +32,14 @@ export interface Messages {
     lede: string;
     items: { title: string; caption: string; alt: string }[];
   };
+  menu: {
+    eyebrow: string;
+    title: string;
+    lede: string;
+    note: string;
+    tags: { hot: string; iced: string };
+    items: { name: string; tag: 'hot' | 'iced'; alt: string }[];
+  };
   sectors: {
     eyebrow: string;
     title: string;
@@ -95,6 +103,7 @@ const en: Messages = {
       { href: '#benefits', label: 'Benefits' },
       { href: '#locations', label: 'Locations' },
       { href: '#gallery', label: 'Gallery' },
+      { href: '#menu', label: 'Menu' },
       { href: '#sectors', label: 'Sectors' },
       { href: '#about', label: 'About' },
       { href: '#faq', label: 'FAQ' },
@@ -145,6 +154,21 @@ const en: Messages = {
       { title: 'Signature iced caramel', caption: 'Barista-quality, poured in under a minute.', alt: 'Iced caramel FikaBot coffee held in a bright café' },
       { title: 'On brand, every cup', caption: 'Fully branded servings — your venue, our craft.', alt: 'FikaBot Precision Coffee Co. branded cup with robotic-arm logo' },
       { title: 'Brown sugar oat latte', caption: 'Spotted in the wild — Malmö Café.', alt: 'FikaBot Brown Sugar Oat Latte at a café in Malmö' },
+    ],
+  },
+  menu: {
+    eyebrow: 'Menu',
+    title: 'The FikaBot Menu',
+    lede: 'From a classic latte to an iced matcha — every drink is freshly made by the robotic barista in under 50 seconds.',
+    note: '…and 70+ more recipes. Customize milk, sweetness and strength right on the touch screen.',
+    tags: { hot: 'Hot', iced: 'Iced' },
+    items: [
+      { name: 'Latte', tag: 'hot', alt: 'FikaBot latte with latte art in a branded double-wall glass' },
+      { name: 'Americano', tag: 'hot', alt: 'FikaBot americano in a branded double-wall glass' },
+      { name: 'Iced Latte', tag: 'iced', alt: 'FikaBot iced latte with a straw in a branded double-wall glass' },
+      { name: 'Cappuccino', tag: 'hot', alt: 'FikaBot cappuccino dusted with cocoa in a branded double-wall glass' },
+      { name: 'Matcha Latte', tag: 'hot', alt: 'FikaBot matcha latte with latte art in a branded double-wall glass' },
+      { name: 'Iced Matcha Latte', tag: 'iced', alt: 'FikaBot iced matcha latte with a straw in a branded double-wall glass' },
     ],
   },
   sectors: {
@@ -245,6 +269,7 @@ const sv: Messages = {
       { href: '#benefits', label: 'Fördelar' },
       { href: '#locations', label: 'Platser' },
       { href: '#gallery', label: 'Galleri' },
+      { href: '#menu', label: 'Meny' },
       { href: '#sectors', label: 'Branscher' },
       { href: '#about', label: 'Om oss' },
       { href: '#faq', label: 'FAQ' },
@@ -295,6 +320,21 @@ const sv: Messages = {
       { title: 'Signatur-iskaffe med karamell', caption: 'Baristakvalitet, serverad på under en minut.', alt: 'Iskaffe med karamell från FikaBot i ett ljust café' },
       { title: 'Varumärke på varje kopp', caption: 'Helt varumärkta serveringar — din lokal, vårt hantverk.', alt: 'FikaBot Precision Coffee Co.-mugg med robotarmslogga' },
       { title: 'Havrelatte med farinsocker', caption: 'Sedd i verkligheten — Malmö Café.', alt: 'FikaBot havrelatte med farinsocker på ett café i Malmö' },
+    ],
+  },
+  menu: {
+    eyebrow: 'Meny',
+    title: 'FikaBots meny',
+    lede: 'Från en klassisk latte till en iskall matcha — varje dryck görs färsk av robotbaristan på under 50 sekunder.',
+    note: '…och 70+ recept till. Anpassa mjölk, sötma och styrka direkt på pekskärmen.',
+    tags: { hot: 'Varm', iced: 'Iskall' },
+    items: [
+      { name: 'Latte', tag: 'hot', alt: 'FikaBot latte med latte art i ett varumärkt dubbelväggat glas' },
+      { name: 'Americano', tag: 'hot', alt: 'FikaBot americano i ett varumärkt dubbelväggat glas' },
+      { name: 'Iced Latte', tag: 'iced', alt: 'FikaBot iced latte med sugrör i ett varumärkt dubbelväggat glas' },
+      { name: 'Cappuccino', tag: 'hot', alt: 'FikaBot cappuccino med kakao i ett varumärkt dubbelväggat glas' },
+      { name: 'Matcha Latte', tag: 'hot', alt: 'FikaBot matcha latte med latte art i ett varumärkt dubbelväggat glas' },
+      { name: 'Iced Matcha Latte', tag: 'iced', alt: 'FikaBot iced matcha latte med sugrör i ett varumärkt dubbelväggat glas' },
     ],
   },
   sectors: {
