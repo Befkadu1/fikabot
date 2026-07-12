@@ -55,7 +55,26 @@ export interface Messages {
   };
   cta: {
     title: string;
-    lede: string;
+    lede: string[];
+    form: {
+      requiredNote: string;
+      name: string;
+      email: string;
+      company: string;
+      website: string;
+      phone: string;
+      message: string;
+      consentPre: string;
+      privacy: string;
+      consentPost: string;
+      send: string;
+      sending: string;
+      subject: string;
+      orReach: string;
+      success: string;
+      errorPre: string;
+      errorPost: string;
+    };
     qrLabel: string;
     qrAlt: string;
   };
@@ -175,8 +194,31 @@ const en: Messages = {
     ],
   },
   cta: {
-    title: 'Bring FikaBot to your space.',
-    lede: 'Zero cost, zero operational hassle. We handle everything — you host the future.',
+    title: "Let's shape the future of coffee together",
+    lede: [
+      'Looking to upgrade your location, venue, or public space with cutting-edge, automated technology?',
+      'At FikaBot, we are always looking for new partners who want to provide a premium, 24/7 coffee experience. We welcome partnerships and inquiries from municipalities, hospitals, universities, shopping malls, train stations, as well as expo and event organizers.',
+      'Fill out the form below, and our team will get back to you as soon as possible!',
+    ],
+    form: {
+      requiredNote: 'indicates required fields',
+      name: 'Name',
+      email: 'Email',
+      company: 'Company name',
+      website: 'Company website',
+      phone: 'Phone',
+      message: 'Message',
+      consentPre: "I agree to FikaBot's ",
+      privacy: 'Privacy Policy',
+      consentPost: '.',
+      send: 'Send',
+      sending: 'Sending…',
+      subject: 'Partnership inquiry',
+      orReach: 'Prefer to reach us directly?',
+      success: "Thanks! We've received your message — our team will get back to you as soon as possible.",
+      errorPre: 'Something went wrong. Please try again, or email us directly at ',
+      errorPost: '.',
+    },
     qrLabel: 'Scan to open fikabot.se',
     qrAlt: 'QR code linking to fikabot.se',
   },
@@ -302,8 +344,31 @@ const sv: Messages = {
     ],
   },
   cta: {
-    title: 'Ta FikaBot till din lokal.',
-    lede: 'Noll kostnad, noll operativt krångel. Vi sköter allt — du är värd för framtiden.',
+    title: 'Låt oss forma kaffets framtid tillsammans',
+    lede: [
+      'Vill du uppgradera din lokal, plats eller offentliga miljö med banbrytande, automatiserad teknik?',
+      'På FikaBot söker vi alltid nya partners som vill erbjuda en premium kaffeupplevelse dygnet runt. Vi välkomnar samarbeten och förfrågningar från kommuner, sjukhus, universitet, köpcentrum och tågstationer, liksom mäss- och evenemangsarrangörer.',
+      'Fyll i formuläret nedan så återkommer vårt team så snart som möjligt!',
+    ],
+    form: {
+      requiredNote: 'markerar obligatoriska fält',
+      name: 'Namn',
+      email: 'E-post',
+      company: 'Företagsnamn',
+      website: 'Företagets webbplats',
+      phone: 'Telefon',
+      message: 'Meddelande',
+      consentPre: 'Jag godkänner FikaBots ',
+      privacy: 'integritetspolicy',
+      consentPost: '.',
+      send: 'Skicka',
+      sending: 'Skickar…',
+      subject: 'Partnerförfrågan',
+      orReach: 'Vill du hellre nå oss direkt?',
+      success: 'Tack! Vi har tagit emot ditt meddelande — vårt team återkommer så snart som möjligt.',
+      errorPre: 'Något gick fel. Försök igen eller mejla oss direkt på ',
+      errorPost: '.',
+    },
     qrLabel: 'Skanna för att öppna fikabot.se',
     qrAlt: 'QR-kod som länkar till fikabot.se',
   },
