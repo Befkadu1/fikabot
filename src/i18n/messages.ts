@@ -90,7 +90,8 @@ export interface Messages {
     links: { href: string; label: string }[];
     privacy: string;
     brandLine1: string;
-    brandLine2: string;
+    location: string;
+    hours: string;
     rights: string;
     logoAlt: string;
   };
@@ -256,7 +257,8 @@ const en: Messages = {
     ],
     privacy: 'Privacy',
     brandLine1: 'FikaBot AB · Precision Coffee Co.',
-    brandLine2: 'Skåne, Sweden',
+    location: 'Location: Emporia Malmö, first floor near the green stairs',
+    hours: 'Opening hours: 10:00–20:00',
     rights: 'All rights reserved.',
     logoAlt: 'FikaBot logo',
   },
@@ -422,7 +424,8 @@ const sv: Messages = {
     ],
     privacy: 'Integritetspolicy',
     brandLine1: 'FikaBot AB · Precision Coffee Co.',
-    brandLine2: 'Skåne, Sverige',
+    location: 'Plats: Emporia Malmö, första våningen vid den gröna trappan',
+    hours: 'Öppettider: 10:00–20:00',
     rights: 'Med ensamrätt.',
     logoAlt: 'FikaBot-logga',
   },
