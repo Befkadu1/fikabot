@@ -1,4 +1,3 @@
-import { useEffect, useRef } from 'preact/hooks';
 import menuLatte from '../../assets/menu-latte.jpg';
 import menuAmericano from '../../assets/menu-americano.jpg';
 import menuIcedLatte from '../../assets/menu-iced-latte.jpg';
@@ -6,6 +5,7 @@ import menuCappuccino from '../../assets/menu-cappuccino.jpg';
 import menuMatcha from '../../assets/menu-matcha-latte.jpg';
 import menuIcedMatcha from '../../assets/menu-iced-matcha-latte.jpg';
 import menuVideo from '../../assets/menu.mp4';
+import { useLazyVideo } from '@hooks/useLazyVideo';
 import { useT } from '../../i18n';
 import './menu.scss';
 
@@ -13,30 +13,7 @@ const images = [menuLatte, menuAmericano, menuIcedLatte, menuCappuccino, menuMat
 
 export function Menu() {
   const t = useT().menu;
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  // Lazy-load the showcase video: with preload="none" and no autoplay, nothing
-  // downloads until the section nears the viewport. rootMargin starts it a bit
-  // early so it's ready on screen; it pauses when scrolled away.
-  useEffect(() => {
-    const el = videoRef.current;
-    if (!el) return;
-    if (!('IntersectionObserver' in window)) {
-      el.play().catch(() => {});
-      return;
-    }
-    const obs = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) el.play().catch(() => {});
-          else el.pause();
-        });
-      },
-      { rootMargin: '300px 0px', threshold: 0.01 },
-    );
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, []);
+  const videoRef = useLazyVideo();
 
   return (
     <section id="menu" class="section section-menu">

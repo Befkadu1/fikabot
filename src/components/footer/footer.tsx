@@ -13,7 +13,9 @@ export function Footer() {
           <p>
             {t.brandLine1}
             <br />
-            {t.brandLine2}
+            {t.location}
+            <br />
+            {t.hours}
             <br />
             <a href="mailto:stessema@fikabot.se">stessema@fikabot.se</a>
             {' · '}
